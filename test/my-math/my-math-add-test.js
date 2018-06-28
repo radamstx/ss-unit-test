@@ -16,8 +16,8 @@ describe("My Math", function () {
       myMath = new MyMath();
     });
 
-    // Base Case - Returns a number
-    it("returns a number", function () {
+    // Base Case - Returns a number if 2 numbers are supplied
+    it("returns a number if 2 numbers are supplied", function () {
       expect(myMath.add(0, 0)).to.be.a("number");
     });
 
@@ -39,6 +39,11 @@ describe("My Math", function () {
     // Base Case - 1 + 1
     it("returns 2 for (1, 1)", function () {
       assert(myMath.add(1, 1) === 2);
+    });
+
+    // Base Case - Returns a string if 2 strings are supplied
+    it("returns a string if 2 strings are supplied", function() {
+      expect(myMath.add("a", "b")).to.be.a("string");
     });
 
     // 0 + Int
@@ -141,6 +146,27 @@ describe("My Math", function () {
       let rand1 = getRandomPositiveFloat();
       let rand2 = getRandomNegativeFloat();
       assert(myMath.add(rand1, rand2) === rand1 + rand2);
+    });
+
+    // Strings - 2 strings
+    it("returns concatenation of n and m where n is a string and m is a string", function () {
+      let str1 = "a";
+      let str2 = "b";
+      assert(myMath.add(str1, str2) === "ab");
+    });
+
+    // Strings - Int + String
+    it("returns a concatenated string when adding a number and a string", function() {
+      let num1 = 1;
+      let str1 = "a";
+      assert(myMath.add(num1, str1) === "1a");
+    });
+
+    // Strings - String + Int
+    it("returns a concatenated string when adding a string and a number", function() {
+      let str1 = "b";
+      let num1 = 2;
+      assert(myMath.add(str1, num1) === "b2");
     });
   });
 });
