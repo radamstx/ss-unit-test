@@ -94,13 +94,13 @@ describe("My Math", function() {
       assert(myMath.divide(rand, 1) === rand);
     });
 
-    // -Int / 1 -> Produces negative
+    // -Int / 1 -> -
     it("returns a negative number when dividing a negative by a positive", function () {
       let rand = getRandomNegativeInteger();
       assert(myMath.divide(rand, 1) < 0);
     });
 
-    // 1 / -Int -> Produces negative
+    // 1 / -Int -> -
     it("returns a negative number when dividing a positive by a negative", function () {
       let rand = getRandomNegativeInteger();
       assert(myMath.divide(1, rand) < 0);
@@ -120,7 +120,7 @@ describe("My Math", function() {
       assert(myMath.divide(rand1, rand2) === rand1 / rand2);
     });
 
-    // Positive integer returned for division of 2 negative integers
+    // -Int / -Int -> +
     it("returns a positive integer for the division of 2 negative integers", function() {
       let rand1 = getRandomNegativeInteger();
       let rand2 = getRandomNegativeInteger();
@@ -167,7 +167,7 @@ describe("My Math", function() {
       assert(myMath.divide(rand1, rand2) === rand1 / rand2);
     });
 
-    // Strings - 2 strings
+    // Strings - 2 strings Doesn't blow up (NaN)
     it("returns NaN when dividing 2 strings", function () {
       let str1 = "a";
       let str2 = "b";

@@ -64,6 +64,12 @@ describe("My Math", function() {
       assert(myMath.subtract(0, rand) === -rand);
     });
 
+    // Returns a positive when subtracting a negative from a positive
+    it("returns a positive when subtracting a negative from a positive", function () {
+      let rand = getRandomNegativeInteger();
+      assert(myMath.subtract(1, rand) > 0);
+    });
+
     // -Int - 0
     it("returns n for (n, 0) where n < 0", function () {
       let rand = getRandomNegativeInteger();

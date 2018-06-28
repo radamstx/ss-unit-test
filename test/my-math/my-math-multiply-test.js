@@ -88,10 +88,16 @@ describe("My Math", function() {
       assert(myMath.multiply(1, rand) === 1 * rand);
     });
 
+    // Returns - when (+ * -)
+    it("returns a negative when multiplying a positive by a negative", function () {
+      let rand = getRandomNegativeInteger();
+      assert(myMath.multiply(1, rand) < 0);
+    });
+
     // -Int * 1
     it("returns (n*1) for (n, 1) where n < 0", function () {
       let rand = getRandomNegativeInteger();
-      assert(myMath.multiply(rand, 1) === 1 * rand);
+      assert(myMath.multiply(rand, 1) === rand * 1);
     });
 
     // Int * Int
@@ -106,6 +112,13 @@ describe("My Math", function() {
       let rand1 = getRandomNegativeInteger();
       let rand2 = getRandomNegativeInteger();
       assert(myMath.multiply(rand1, rand2) === rand1 * rand2);
+    });
+
+    // -Int * -Int >= 1
+    it("returns a positive when multiplying 2 negative numbers", function ()  {
+      let rand1 = getRandomNegativeInteger();
+      let rand2 = getRandomNegativeInteger();
+      assert(myMath.multiply(rand1, rand2) >= 1);
     });
 
     // Int * -Int
@@ -148,7 +161,7 @@ describe("My Math", function() {
       assert(myMath.multiply(rand1, rand2) === rand1 * rand2);
     });
 
-    // Strings - 2 strings
+    // Strings - 2 strings Doesn't blow up (NaN)
     it("returns NaN when multiplying 2 strings", function () {
       let str1 = "a";
       let str2 = "b";
