@@ -1,6 +1,6 @@
 let assert = require("chai").assert;
 let expect = require("chai").expect;
-const MyMath = require("../../lib/my-math.js");
+const MyMath = require("../../lib/my-math");
 const {
   getRandomPositiveInteger,
   getRandomNegativeInteger,
