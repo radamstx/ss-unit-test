@@ -33,5 +33,19 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm test
+      # Make test results directory
+      - run: mkdir ~/test-results
+
+      # Run tests
+      - run: ./node_modules/.bin/mocha test --recursive --reporter mocha-junit-reporter
+        environment:
+          MOCHA_FILE: ~/test-results/test-results.xml
+        when: always
+
+      # Store test results
+      - store_test_results:
+          path: ~/test-results
+
+      # Artifact test results
+      - store_artifacts:
+          path: ~/test-results

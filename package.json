@@ -2,18 +2,19 @@
   "name": "ss-unit-test",
   "version": "0.0.1",
   "description": "Unit test code challenge",
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/radamstx/ss-unit-test.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radamstx/ss-unit-test.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --recursive --reporter spec"
+    "test": "./run.sh"
   },
   "author": "Robert Adams <r.adams.tx@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.17.0"
   },
   "dependencies": {}
 }
