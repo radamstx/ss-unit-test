@@ -9,9 +9,9 @@ const {
 } = require("../test-helpers.js");
 
 describe("My Math", function () {
-  let myMath;
-
   describe("add", function () {
+    let myMath;
+
     beforeEach(function () {
       myMath = new MyMath();
     });
