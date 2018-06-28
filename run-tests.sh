@@ -1,4 +1,4 @@
 #!/bin/bash
 
-MOCHA_FILE=test-results.xml
-./node_modules/.bin/mocha test --recursive --reporter mocha-junit-reporter
+mkdir -p test-results
+./node_modules/.bin/mocha test --recursive --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/test-results.xml

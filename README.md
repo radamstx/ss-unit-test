@@ -26,10 +26,16 @@ npm install
 
 ## Running the tests
 
-To run the tests:
+To run the tests, you can either:
 
 ```
 npm test
+```
+
+Or:
+
+```
+./run-tests.sh
 ```
 
 ## Continuous Integration

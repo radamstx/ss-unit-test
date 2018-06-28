@@ -7,7 +7,7 @@
     "url": "https://github.com/radamstx/ss-unit-test.git"
   },
   "scripts": {
-    "test": "./run.sh"
+    "test": "./run-tests.sh"
   },
   "author": "Robert Adams <r.adams.tx@gmail.com>",
   "license": "MIT",
