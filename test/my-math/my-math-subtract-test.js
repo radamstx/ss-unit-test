@@ -41,7 +41,7 @@ describe("My Math", function() {
       assert(myMath.subtract(1, 1) === 0);
     });
 
-    // Base Case - Doesn't blow up when subtracting to strings (NaN)
+    // Base Case - Doesn't blow up when subtracting 2 strings (NaN)
     it("returns NaN when subtracting 2 strings", function() {
       expect(myMath.subtract("a", "b")).to.be.NaN;
     });

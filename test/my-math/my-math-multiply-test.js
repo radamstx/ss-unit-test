@@ -41,7 +41,7 @@ describe("My Math", function() {
       assert(myMath.multiply(1, 1) === 1);
     });
 
-    // Base Case - Doesn't blow up when subtracting to strings (NaN)
+    // Base Case - Doesn't blow up when multiplying 2 strings (NaN)
     it("returns NaN when multiplying 2 strings", function() {
       expect(myMath.multiply("a", "b")).to.be.NaN;
     });
@@ -168,6 +168,5 @@ describe("My Math", function() {
       let str1 = "a";
       expect(myMath.subtract(str1, num1)).to.be.NaN;
     });
-    
   });
 });
