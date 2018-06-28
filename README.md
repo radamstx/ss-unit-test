@@ -32,6 +32,10 @@ To run the tests:
 npm test
 ```
 
+## Continuous Integration
+
+Upon commit, a build will start on circleci and tests will run. You may find the build here: https://circleci.com/gh/radamstx/ss-unit-test
+
 ### Required changes
 
 Add, subtract, multiply, divide all had the incorrect operand in the calculation. Add and subtract needed the operand

@@ -41,7 +41,7 @@ describe("My Math", function() {
       assert(myMath.subtract(1, 1) === 0);
     });
 
-    // Base Case - Doesn't blow up when subtracting to strings
+    // Base Case - Doesn't blow up when subtracting to strings (NaN)
     it("returns NaN when subtracting 2 strings", function() {
       expect(myMath.subtract("a", "b")).to.be.NaN;
     });
@@ -149,14 +149,14 @@ describe("My Math", function() {
     });
 
     // Int - String Doesn't blow up (NaN)
-    it("returns a concatenated string when adding a number and a string", function() {
+    it("returns NaN when subtracting a string from a number", function() {
       let num1 = 1;
       let str1 = "a";
       expect(myMath.subtract(num1, str1)).to.be.NaN;
     });
 
     // String - Int Doesn't blow up (NaN)
-    it("returns a concatenated string when adding a number and a string", function() {
+    it("returns NaN when subtracting a number from a string", function() {
       let num1 = 1;
       let str1 = "a";
       expect(myMath.subtract(str1, num1)).to.be.NaN;
