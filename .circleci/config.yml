@@ -38,8 +38,8 @@ jobs:
 
       # Store test results
       - store_test_results:
-          path: ~/test-results
+          path: test-results
 
       # Artifact test results
       - store_artifacts:
-          path: ~/test-results
+          path: test-results
