@@ -2,7 +2,7 @@
 
 This project is for the purposes of an interview code challenge.
 
-Caveat: This is my first JavaScript and Node project I've created.
+Caveat: This is my first JavaScript project I've ever created, along with first time using Mocha and Chai.
 
 Robert Adams 512-289-3850 <r.adams.tx@gmail.com>
 
